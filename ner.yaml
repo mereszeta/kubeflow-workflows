@@ -10,7 +10,7 @@ inputs:
     type: String
 
 outputs:
-  - name: text
+  - name: output
     description: 'Named entities found.'
     type: String
 
@@ -22,3 +22,5 @@ implementation:
       --inputd, {inputValue: inputd},
       --outputd, {inputValue: outputd}
     ]
+    fileOutputs:
+      output: /tmp/sentiment.json

@@ -22,4 +22,6 @@ implementation:
       --inputd, {inputValue: inputd},
       --outputd, {inputValue: outputd}
     ]
+    fileOutputs:
+      output: /tmp/sentiment.json
 
