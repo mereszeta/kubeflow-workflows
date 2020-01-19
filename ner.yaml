@@ -2,8 +2,11 @@ name: Named entity recognition task
 description: Finds named entities in text 
 
 inputs:
-  - name: text
-    description: 'The text to search named entities'
+  - name: inputd
+    description: 'Input directory'
+    type: String
+  - name: outputd
+    description: 'Output directory'
     type: String
 
 outputs:
