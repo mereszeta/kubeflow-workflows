@@ -5,6 +5,7 @@ inputs:
   - name: bucketName
     description: 'Name of s3 bucket'
     type: String
+
   - name: fileCount
     description: 'Number of files'
     type: Integer
@@ -23,4 +24,4 @@ implementation:
       --fileCount, {inputValue: fileCount}
     ]
     fileOutputs:
-      output: /tmp/sentiment.json
+      output: /tmp/ner.json

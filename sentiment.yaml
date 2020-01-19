@@ -5,6 +5,7 @@ inputs:
   - name: bucketName
     description: 'Name of s3 bucket'
     type: String
+
   - name: fileCount
     description: 'Number of files'
     type: Integer
