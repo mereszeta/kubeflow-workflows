@@ -2,8 +2,8 @@ name: Sentiment task
 description: Calculates sentiment in text
 
 inputs:
-  - name: text
-    description: 'The text to calculate entities'
+  - name: inputd
+    description: 'Input directory'
     type: String
   - name: outputd
     description: 'Output directory'
