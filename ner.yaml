@@ -16,7 +16,7 @@ outputs:
 
 implementation:
   container:
-    image: https://hub.docker.com/repository/docker/lemurpwned/ner
+    image: localhost:3200/ner
     command: [python3, /app/ner.py]
     args: [
       --inputd, {inputValue: inputd},
