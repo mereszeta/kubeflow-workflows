@@ -16,7 +16,7 @@ outputs:
 
 implementation:
   container:
-    image: localhost:3200/ner
+    image: localhost:32000/ner
     command: [python3, /app/sentiment.py]
     args: [
       --inputd, {inputValue: inputd},
