@@ -1,0 +1,21 @@
+name: Named entity recognition task
+description: Finds named entities in text 
+
+inputs:
+  - name: text
+    description: 'The text to search named entities'
+    type: String
+
+outputs:
+  - name: text
+    description: 'Named entities found.'
+    type: String
+
+implementation:
+  container:
+    image: https://hub.docker.com/repository/docker/lemurpwned/ner
+    command: [python3, /app/ner.py]
+    args: [
+      --inputd, {inputValue: text},
+      --outputd, {inputValue: text}
+    ]
