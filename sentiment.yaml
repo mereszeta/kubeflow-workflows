@@ -19,7 +19,7 @@ implementation:
     image: https://hub.docker.com/repository/docker/lemurpwned/sentiment
     command: [python3, /app/sentiment.py]
     args: [
-      --inputd, {inputValue: text},
-      --outputd, {inputValue: text}
+      --inputd, {inputValue: inputd},
+      --outputd, {inputValue: outputd}
     ]
 

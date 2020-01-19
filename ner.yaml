@@ -19,6 +19,6 @@ implementation:
     image: https://hub.docker.com/repository/docker/lemurpwned/ner
     command: [python3, /app/ner.py]
     args: [
-      --inputd, {inputValue: text},
-      --outputd, {inputValue: text}
+      --inputd, {inputValue: inputd},
+      --outputd, {inputValue: outputd}
     ]
