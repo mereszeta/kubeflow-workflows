@@ -2,25 +2,25 @@ name: Sentiment task
 description: Calculates sentiment in text
 
 inputs:
-  - name: inputd
-    description: 'Input directory'
+  - name: bucketName
+    description: 'Name of s3 bucket'
     type: String
-  - name: outputd
-    description: 'Output directory'
-    type: String
+  - name: fileCount
+    description: 'Number of files'
+    type: Integer
 
 outputs:
-  - name: text
+  - name: output
     description: 'Named entities found.'
     type: String
 
 implementation:
   container:
-    image: localhost:32000/ner
+    image: localhost:32000/sentiment
     command: [python3, /app/sentiment.py]
     args: [
-      --inputd, {inputValue: inputd},
-      --outputd, {inputValue: outputd}
+      --bucketName, {inputValue: bucketName},
+      --fileCount, {inputValue: fileCount}
     ]
     fileOutputs:
       output: /tmp/sentiment.json

@@ -1,13 +1,13 @@
 name: Named entity recognition task
-description: Finds named entities in text 
+description: Finds named entities in text
 
 inputs:
-  - name: inputd
-    description: 'Input directory'
+  - name: bucketName
+    description: 'Name of s3 bucket'
     type: String
-  - name: outputd
-    description: 'Output directory'
-    type: String
+  - name: fileCount
+    description: 'Number of files'
+    type: Integer
 
 outputs:
   - name: output
@@ -19,8 +19,8 @@ implementation:
     image: localhost:32000/ner
     command: [python3, /app/ner.py]
     args: [
-      --inputd, {inputValue: inputd},
-      --outputd, {inputValue: outputd}
+      --bucketName, {inputValue: bucketName},
+      --fileCount, {inputValue: fileCount}
     ]
     fileOutputs:
       output: /tmp/sentiment.json
